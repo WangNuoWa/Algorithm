@@ -3,8 +3,8 @@
  */
 public class LongestCommonSubsequence {
     public static void main(String[] args) {
-        String X = "ABCBDAB";
-        String Y = "BDCABA";
+        String X = "abcffggcbda";
+        String Y = "adbcggffcba";
         char[] arr1 = X.toCharArray();
         char[] arr2 = Y.toCharArray();
         System.out.println(lcs(arr1, arr2, arr1.length, arr2.length));
