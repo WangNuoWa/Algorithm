@@ -10,7 +10,8 @@ public class LongestPalindromeSequence {
     //动规求LPS, X[0,1, ..., n-1]
     private static int lps(char[] X, int n) {
         int[][] dp = new int[n][n];
-        for (int i = n - 1; i >= 0; i--) {
+
+        for (int i = n - 1; i >= 0; i--) {  // 递推式dp[i][j]需要用到dp[i+1][j],所以逆序i
             dp[i][i] = 1;
             for (int j = i + 1; j < n; j++) {
                 if (X[i] == X[j])
